@@ -1,0 +1,13 @@
+= form_for @gallery do |f|
+  .row
+    #galleries.container.z-depth-2
+      p.input-field.col.s4.offset-s4
+          = f.label :name, "title of gallery", class: (:active if @gallery.name)
+          = f.text_field :name
+  p
+    .col.s12.center-align
+      = f.button "", class: "btn-floating btn-large waves-effect waves-light mdi-navigation-check", id: 'cute-buttons'
+      - if @gallery.id?
+        = link_to "", @gallery, class: "btn-floating btn-large waves-effect waves-light mdi-content-undo", id: "cute-buttons"
+
+      = link_to "", galleries_path, class: "btn-floating btn-large waves-effect waves-light mdi-action-view-module", id: "cute-buttons"

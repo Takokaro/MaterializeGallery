@@ -1,3 +1,82 @@
 // Place all the styles related to the Galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dark_gray: rgba(0, 0, 0, 0.4);
+$light_gray: rgba(234, 234, 234, 0.6);
+
+body {
+  background-color: $dark_gray;
+}
+
+.header {
+  h2 {
+    color: $light_gray;
+  }
+}
+
+#galleries.container {
+  margin-top: 20px;
+  background-color: $dark_gray;
+  min-height: 150px;
+}
+ 
+.card.small.custom {
+  height: 200px;
+  //width: 190px;
+
+  .card-image {
+    // height: 200px;
+    height: 100%;
+    //width: 190px;
+  }
+  .card-action {
+    padding: 13px 9px;
+    background: $dark_gray;
+  }
+  .card-title {
+    bottom: -20px; 
+  }
+  a {
+    color: $light_gray;
+  }
+  a:hover {
+    color: rgba(234, 234, 234, 0.9);
+    font-size: 12pt;
+  }
+}
+
+.pictures.col.s2 {
+  width: inherit;
+}
+
+#cute-buttons.btn-floating {
+  font-size: 26pt;
+  background-color: $dark_gray;
+  color: $light_gray;
+  margin-right: 7px;
+}
+
+#cute-buttons.btn-floating:hover {
+  font-size: 29pt;
+  color: rgba(234, 234, 234, 0.9);
+  margin-left: 9px;
+}
+
+#cute-delete-buttons {
+  right: 0px;
+  position: absolute;
+  font-size: 17px;
+}
+
+.gray {
+  background-color: $dark_gray;
+}
+
+.input-field.col.s4.offset-s4 label {
+  color: $light_gray;
+}
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $dark_gray;
+  box-shadow: 0 1px 0 0 $dark_gray;
+}

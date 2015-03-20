@@ -1,0 +1,20 @@
+nav.gray
+  .nav-wrapper  
+    .header.brand-logo.center
+      h2 Galleries
+
+#galleries.container.z-depth-2
+  .row
+    - @galleries.each do |gallery|
+      .pictures.col.s3
+        .card.small.custom
+          .card-image
+            - if gallery.paintings.present?
+              = image_tag gallery.gallery_cover
+          .card-action.waves-effect.waves-light
+            = link_to truncate(gallery.name, length: 15), gallery
+        
+
+p
+  .col.s12.center-align
+    = link_to "", new_gallery_path, class: "btn-floating btn-large waves-effect waves-light mdi-content-add", id: "cute-buttons"

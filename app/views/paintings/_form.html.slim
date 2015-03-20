@@ -1,0 +1,22 @@
+
+= form_for @painting, html: { multipart: true } do |f|
+  row
+    #paintings.container.z-depth-2
+      = f.hidden_field :gallery_id
+      p.input-field.col.s4.offset-s4
+        = f.label :name, class: (:active if @painting.name)
+        = f.text_field :name
+      p.mdi-file-attachment
+        = f.file_field :image
+      .input-field.col.s4.offset-s4
+        = f.label :remote_image_url, "or image URL"
+        = f.text_field :remote_image_url
+      .col.s2.right-align
+        = f.button "", class: "btn-floating waves-effect waves-light mdi-navigation-check", id: 'cute-buttons'
+      .container
+        |   
+        - flash.each do |key, value|
+          |     
+          div class="alert alert-#{key}" 
+            = value
+            |   

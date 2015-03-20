@@ -1,0 +1,27 @@
+nav.gray
+  .nav-wrapper  
+    .header.brand-logo.center
+      h2 Gallery: #{@gallery.name}
+
+#galleries.container.z-depth-2
+  .row
+    - @gallery.paintings.each do |painting|
+      #pictures.col.s3
+        .card.small.custom
+          .card-image
+            - if painting.image?
+              = link_to image_tag(painting.image_url(:thumb)), painting.image_url, target: "_blank"
+
+              .card-action.waves-effect.waves-light
+                = link_to truncate(painting.name, length: 15), edit_painting_path(painting)
+                = link_to "", painting, method: :delete, data: { confirm: 'Do you REALLY want to DELETE this cute Picture?' }, class: "waves-effect waves-light mdi-action-highlight-remove", id: "cute-delete-buttons"  
+
+  div
+p.center-align
+  = link_to "", new_painting_path(gallery_id: @gallery), class: "btn-floating btn-large waves-effect waves-light mdi-content-add", id: "cute-buttons"
+
+  = link_to "", edit_gallery_path, class: "btn-floating btn-large waves-effect waves-light mdi-image-edit", id: "cute-buttons"
+
+  = link_to "", @gallery, method: :delete, data: { confirm: 'Do you REALLY want to DELETE this cute Gallery?' }, class: "btn-floating btn-large waves-effect waves-light mdi-action-delete", id: "cute-buttons"
+
+  = link_to "", galleries_path, class: "btn-floating btn-large waves-effect waves-light mdi-action-view-module", id: "cute-buttons"

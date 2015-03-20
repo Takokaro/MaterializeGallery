@@ -1,3 +1,26 @@
 // Place all the styles related to the Paintings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$dark_gray: rgba(0, 0, 0, 0.4);
+$light_gray: rgba(234, 234, 234, 0.6);
+
+
+#paintings.container {
+  margin-top: 20px;
+  background-color: $dark_gray;
+  min-height: 150px;
+  padding: 10px;
+}
+
+
+input[type=file] {
+  color: $light_gray;
+}
+
+input[type=file]:focus {
+  color: rgba(234, 234, 234, 0.9);
+}
+
+

@@ -1,0 +1,9 @@
+nav.gray
+  .nav-wrapper  
+    .header.brand-logo.center
+      h2 Edit Painting
+
+= render 'form'
+p
+  .col.s12.center-align
+    = link_to "", @painting.gallery, class: "btn-floating btn-large waves-effect waves-light mdi-content-undo", id: "cute-buttons"

@@ -46,6 +46,8 @@ group :development, :test do
   gem 'rmagick'
   gem 'carrierwave'
 
+  gem 'slim-rails'
+  gem 'materialize-sass'
 
 end
 
