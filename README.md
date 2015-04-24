@@ -20,3 +20,4 @@ For migrations
 
 ``` rake db:migrate ```
 
+Live demo http://gallery.kolibri-beauty.ru/galleries
